@@ -1,0 +1,11 @@
+﻿{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "Issuer": "http://localhost:7071",
+    "Token:Audience": "http://localhost:3000",
+    "Token:AccessTokenSecret": "A?D(G+KbPeShVmYq3s6v9y$B&E)H@McQfTjWnZr4u7w!z%C*F-JaNdRgUkXp2s5v",
+    "Token:RefreshTokenExpiryTime": 8640000000, // 100 Days (In miliseconds)
+    "Token:AccessTokenExpiryTime": 8640000000 // 100 Days (In miliseconds)
+  }
+}
