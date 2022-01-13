@@ -16,6 +16,7 @@ namespace AzureFunctionAuthorization {
 
             var services = builder.Services;
 
+            // Register JWTHandlerSwervice, used to create parse and validate token
             services.AddSingleton<IJWTHandlerService, JWTHandlerService>(x => {
                 return new JWTHandlerService(
                     new JWTConfiguration {
@@ -28,6 +29,7 @@ namespace AzureFunctionAuthorization {
                 );
             });
 
+            // Register JWTAuthorizationExtesionProvider
             var webJobs = services.AddWebJobs(x => { return; });
             webJobs.AddExtension<JWTAuthorizationExtensionProvider>();
         }
