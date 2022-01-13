@@ -1,5 +1,5 @@
-﻿using AzureFunctionAuthorization.Domain.ViewModel;
-using AzureFunctionAuthorization.Extensions;
+﻿using AzureFunctionAuthorization.Binding;
+using AzureFunctionAuthorization.Domain.ViewModel;
 using AzureFunctionAuthorization.IService;
 using AzureFunctionAuthorization.Service;
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
@@ -29,7 +29,7 @@ namespace AzureFunctionAuthorization {
             });
 
             var webJobs = services.AddWebJobs(x => { return; });
-            webJobs.AddJWTAuthorizationBinding();
+            webJobs.AddExtension<JWTAuthorizationExtensionProvider>();
         }
     }
 }
